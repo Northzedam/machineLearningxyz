@@ -8,7 +8,7 @@ puerto = 1883
 canal = "rmm/generadormtuonsiteenergy/temp"
 
 # Archivo CSV para guardar los datos
-archivo_csv = "datos_conduccion.csv"
+archivo_csv = "datos_conduccion_con_aceleracion.csv"
 
 # Función para manejar el evento de recepción de mensajes MQTT
 def on_message(client, userdata, msg):
@@ -39,7 +39,7 @@ cliente.subscribe(canal)
 cliente.loop_start()
 
 # Esperar un tiempo suficiente para recibir datos (ajústalo según tus necesidades)
-tiempo_espera = 60  # segundos
+tiempo_espera = 7200  # segundos
 time.sleep(tiempo_espera)
 
 # Detener el bucle de recepción de mensajes
